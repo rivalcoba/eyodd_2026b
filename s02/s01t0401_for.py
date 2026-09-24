@@ -8,22 +8,42 @@ calculara la suma del 1 al 100
 # Importamos biblioteca time
 import time
 
-# Tomando el tiempo inicial
-timestamp_01 = time.time()
-
-# Programa que calcula las suma
-# de los "n" numeros naturales
-n = 100
-total_sum = 0
-
-# Ciclo for
-for number in range(1,n+1):
+# Funcion que suma los
+# primeros "n" numreso naturles
+def sum_of_n(n):
+  total_sum = 0
+  # Sumando los "n" numeros
+  # Ciclo for
+  for number in range(1,n+1):
     total_sum = total_sum + number
+  # Retornando el total de la suma
+  return total_sum
 
-print(f"La suma de 1 hasta {n} es: {total_sum}")
+# Variable para guardar
+# El data set
+dataset = [] #[(n,time,sum),(n,time,sum)]
 
-# Tomando el tiempo final
-timestamp_02 = time.time()
+# Generando el contenido del Datset
+for repetition in range(1,11):
+  # ⏱️ Tomo el tiempo 1 (inicial)
+  timestamp_01 = time.time()
 
-# Impresión del tiempo de ejecución
-print(f"Tiempo de ejecucion: {(timestamp_02-timestamp_01) * 1e6:.2f} μs")
+  # Sumo los "n" números
+  n = repetition*500
+  # Guardo el resultado en result
+  result = sum_of_n(n)
+
+  # ⏱️Tomando el tiempo final
+  timestamp_02 = time.time()
+
+  # Calculando el tiempo
+  elapsed_time = round((timestamp_02-timestamp_01) * 1e6,2)
+
+  # Agregar la tripleta de los 
+  # datos al dataset
+  dataset.append( (n,elapsed_time,result) )
+
+# Imprimir el dataset
+for tup in dataset:
+  print(tup)
+
