@@ -1,4 +1,3 @@
-"""
 # Creamos una lista de estudiantes
 # O(1)
 student_list_01 = ['Jordan','Pipen','Curry','Shack','Monrroy','Arlette','Palestina']
@@ -22,4 +21,3 @@ print(random_function(student_list_01))
 print("")
 
 # Calcular O(2n)+O(5) = O(2n+5) = O(n)
-"""
