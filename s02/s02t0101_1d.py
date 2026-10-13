@@ -40,3 +40,9 @@ try:
   print(f"Localizado {num_to_search}: {my_array.index(num_to_search)}")
 except:
   print("⚠️ Numero no encontrado!!!")
+
+# Asignado valor en un indice que no existe
+try:
+  my_array[100] = 3
+except:
+  print("⚠️ Indice no existe!!!")
