@@ -1,0 +1,11 @@
+{
+  "editor.fontSize": 28,
+  "terminal.integrated.fontSize": 28,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "[python]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  }
+}
