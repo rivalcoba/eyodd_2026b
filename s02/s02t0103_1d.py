@@ -1,3 +1,4 @@
+# Eliminacion
 # Importando funcion Array
 # del modulo array y renombrando
 # como arr
@@ -7,22 +8,18 @@ from array import array as arr
 # Archivo
 from s02t0102_1d import print_array
 
-my_array = arr('i',[2,10,15,20])
+my_array = arr('i',[2,10,15,20,10])
 
-print("--- ANTES DE LA INSERCIÓN ---")
+print("--- ANTES DE LA ELIMINACION ---")
 print_array(my_array)
 
-# Inserción
-my_array.insert(1,90)
-print("--- DESPUES DE LA INSERCIÓN ---")
+# Eliminación
+try:
+ my_array.remove(100)
+except:
+ print(f"no se encuentra en el arreglo")
+print("--- DESPUES DE LA ELIMINACION ---")
 print_array(my_array)
 
-print("--- DESPUES DE UN APPEND ---")
-my_array.append(1000)
-print_array(my_array)
-
-print("--- SIMULAR UN APPEND CON INSERT ---")
-my_array.insert(len(my_array),90000)
-print_array(my_array)
 
 
